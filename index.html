@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reportes de Salones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <h1>Sistema de Reportes</h1>
+            <div class="nav-links">
+                <button onclick="showSection('dashboard')" class="nav-btn active">Dashboard</button>
+                <button onclick="showSection('registro')" class="nav-btn">Registro</button>
+                <button onclick="showSection('reportes')" class="nav-btn">Reportes</button>
+                <button onclick="showSection('calendario')" class="nav-btn">Calendario</button>
+                <button onclick="showSection('proximos')" class="nav-btn">Próximos Eventos</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Secciones existentes -->
+        <section id="dashboard" class="section active">
+            <!-- Contenido del dashboard -->
+        </section>
+
+        <section id="registro" class="section">
+            <!-- Contenido del registro -->
+        </section>
+
+        <section id="reportes" class="section">
+            <!-- Contenido de reportes -->
+        </section>
+
+        <section id="calendario" class="section">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h2>Calendario de Eventos</h2>
+                    <div class="calendar-nav">
+                        <button onclick="prevMonth()">&lt;</button>
+                        <span id="currentMonth"></span>
+                        <button onclick="nextMonth()">&gt;</button>
+                    </div>
+                </div>
+                <div id="calendarGrid"></div>
+            </div>
+        </section>
+
+        <section id="proximos" class="section">
+            <div class="upcoming-events">
+                <h2>Próximos Eventos</h2>
+                <div class="filter-group">
+                    <label>Ver eventos de:</label>
+                    <select id="employeeEventFilter" onchange="filterUpcomingEvents()">
+                        <option value="all">Todos los empleados</option>
+                    </select>
+                </div>
+                <div id="upcomingEventsList"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
