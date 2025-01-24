@@ -20,6 +20,8 @@ body {
     background: var(--gradient-bg);
     color: var(--text-primary);
     min-height: 100vh;
+    font-size: 14px; /* Tamaño de fuente base reducido */
+    padding: 0.5rem; /* Espaciado interno reducido */
 }
 
 nav {
@@ -74,6 +76,225 @@ main {
     display: block;
 }
 
+/* Dashboard Styles */
+.dashboard-container {
+    background: var(--card-bg);
+    padding: 1rem; /* Espaciado interno reducido */
+    border-radius: var(--border-radius);
+}
+
+.date-filter {
+    margin-bottom: 1rem; /* Espaciado inferior reducido */
+    display: flex;
+    gap: 0.5rem; /* Espacio entre elementos reducido */
+    align-items: center;
+}
+
+.date-filter input[type="date"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 0.4rem; /* Espaciado interno reducido */
+    border-radius: var(--border-radius);
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas */
+    gap: 0.75rem; /* Espacio entre elementos reducido */
+    margin: 1rem 0; /* Espaciado vertical reducido */
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem; /* Espaciado interno reducido */
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.75rem; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0.25rem 0; /* Espaciado vertical reducido */
+}
+
+.stat-card p {
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    color: var(--text-secondary);
+}
+
+/* Estilos para los gráficos */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Columnas más pequeñas */
+    gap: 0.75rem; /* Espacio entre gráficos reducido */
+    margin: 1rem 0; /* Espaciado vertical reducido */
+}
+
+.chart-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem; /* Espaciado interno reducido */
+    border-radius: var(--border-radius);
+}
+
+.chart-wrapper h3 {
+    margin-bottom: 0.5rem; /* Espaciado inferior reducido */
+    color: var(--text-secondary);
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+}
+
+/* Estilos para el contenedor del gráfico */
+.chart-container {
+    height: 50px; /* Altura reducida del gráfico */
+    width: 100%; /* Ancho completo */
+}
+/* Form Styles */
+.form-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: var(--accent-color);
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Reports Styles */
+.reports-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+}
+
+.export-btn {
+    background: var(--accent-color);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.reports-table th,
+.reports-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reports-table th {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.priority {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.priority.baja {
+    background: rgba(76, 217, 100, 0.2);
+    color: var(--success-color);
+}
+
+.priority.media {
+    background: rgba(255, 204, 0, 0.2);
+    color: #ffcc00;
+}
+
+.priority.alta {
+    background: rgba(255, 107, 107, 0.2);
+    color: var(--error-color);
+}
+
+.report-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.report-actions button {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+tr.atendido {
+    opacity: 0.7;
+}
+
+/* Calendar Styles */
 .calendar-container {
     background: var(--card-bg);
     padding: 2rem;
@@ -146,16 +367,26 @@ main {
     cursor: default;
 }
 
-.calendar-date.has-events::after {
-    content: '';
-    position: absolute;
-    bottom: 0.3rem;
-    width: 0.4rem;
-    height: 0.4rem;
-    background: var(--accent-color);
-    border-radius: 50%;
+.calendar-date.has-events {
+    border: 1px solid var(--accent-color);
 }
 
+.event-indicator {
+    position: absolute;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    background: var(--accent-color);
+    color: #000;
+    font-size: 0.7rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Styles */
 .event-modal {
     position: fixed;
     top: 50%;
@@ -166,224 +397,206 @@ main {
     border-radius: var(--border-radius);
     z-index: 1001;
     max-width: 500px;
-    width: 90%;
+    width: 60%;
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-}
 
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.modal-close {
-    background: transparent;
+.filter-group select {
+    background: rgba(255, 255, 255, 0.1);
     border: none;
-    color: var(--text-secondary);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.upcoming-events {
-    background: var(--card-bg);
-    padding: 2rem;
+    color: var(--text-primary); /* Corregido: Usar "color" en lugar de "r" */
+    padding: 0.5rem;
     border-radius: var(--border-radius);
 }
 
-.upcoming-events .filter-group {
-    margin-bottom: 2rem;
-}
-
+/* Estilos para la tabla de eventos */
 .events-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
 .events-table th,
 .events-table td {
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .events-table th {
+    background: rgba(255, 255, 255, 0.1);
     color: var(--accent-color);
-    font-weight: bold;
 }
 
-.events-table tr:hover {
-    background: rgba(255, 255, 255, 0.05);
+.events-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
 }
 
+/* Estilos para los botones de acciones */
 .event-actions {
     display: flex;
     gap: 0.5rem;
 }
 
 .event-actions button {
-    background: transparent;
-    border: 1px solid var(--error-color);
-    color: var(--error-color);
-    padding: 0.25rem 0.5rem;
+    background: var(--accent-color);
+    border: none;
+    padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
+    background: var(--accent-color);
+    color: #000;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-select, input {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-primary);
-    padding: 0.5rem;
-    border-radius: var(--border-radius);
+.event-actions button:hover {
+    background: #52d1b8;
+}
+
+#employeeEventFilter {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    color: var(--text-primary); /* Color del texto (blanco) */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    -webkit-appearance: none; /* Para compatibilidad con Safari */
+    -moz-appearance: none; /* Para compatibilidad con Firefox */
+}
+
+#employeeEventFilter:hover {
+    background: rgba(255, 255, 255, 0.2); /* Fondo más claro al pasar el mouse */
+    border-color: rgba(255, 255, 255, 0.3); /* Borde más claro al pasar el mouse */
+}
+
+#employeeEventFilter:focus {
+    outline: none; /* Elimina el borde de enfoque por defecto */
+    border-color: var(--accent-color); /* Borde de enfoque personalizado */
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2); /* Sombra de enfoque */
+}
+
+/* Estilo para las opciones del menú desplegable */
+#employeeEventFilter option {
+    background: #1e242c; /* Fondo oscuro para las opciones */
+    color: var(--text-primary); /* Texto claro para las opciones */
+}
+
+/* Flecha personalizada para el menú desplegable */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrapper::after {
+    content: '▼'; /* Flecha hacia abajo */
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none; /* Evita que la flecha interfiera con el clic */
+    color: var(--text-primary); /* Color de la flecha */
+}
+ 
+/* Estilos para el modal */
+.event-modal {
+    background: var(--card-bg); /* Fondo oscuro */
+    padding: 1rem; /* Espaciado interno reducido */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    max-width: 350px; /* Ancho máximo reducido */
+    width: 60%; /* Ancho relativo para responsividad */
+    margin: 0 auto; /* Centrar el modal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar posición */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Estilos para el overlay (fondo oscuro) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    z-index: 999; /* Asegurar que esté por debajo del modal */
 }
 
-select option {
-    background: #2a323c;
-    color: var(--text-primary);
+/* Estilos para el encabezado del modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; /* Espaciado inferior */
 }
 
-.dashboard-container,
-.form-container,
-.reports-container {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    margin-bottom: 2rem;
+.modal-header h3 {
+    color: var(--accent-color); /* Color del título */
+    margin: 0; /* Eliminar margen por defecto */
+    font-size: 1.25rem; /* Tamaño de fuente reducido */
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--text-primary); /* Color del texto */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: color 0.3s ease; /* Transición suave */
 }
 
-.stat-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    text-align: center;
+.modal-close:hover {
+    color: var(--error-color); /* Cambiar el color al pasar el mouse */
 }
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--accent-color);
-    margin: 0.5rem 0;
-}
-
+/* Estilos para los grupos de formulario */
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem; /* Espaciado inferior reducido */
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--text-secondary);
+    display: block; /* Hacer que las etiquetas ocupen una línea completa */
+    color: var(--text-primary); /* Color del texto */
+    margin-bottom: 0.25rem; /* Espaciado inferior reducido */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
 }
 
 .form-group input,
-.form-group select,
 .form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius);
-    color: var(--text-primary);
+    width: 100%; /* Ocupar todo el ancho disponible */
+    padding: 0.5rem; /* Espaciado interno reducido */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    color: var(--text-primary); /* Color del texto */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
 }
 
 .form-group textarea {
-    min-height: 100px;
-    resize: vertical;
+    resize: vertical; /* Permitir redimensionar verticalmente */
+    min-height: 80px; /* Altura mínima reducida */
 }
 
+/* Estilos para el botón de enviar */
 .submit-btn {
-    background: var(--accent-color);
-    color: #000;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-weight: bold;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    background: var(--accent-color); /* Fondo del botón */
+    border: none; /* Sin borde */
+    padding: 0.5rem; /* Espaciado interno reducido */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    color: var(--text-primary); /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background 0.3s ease; /* Transición suave */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
 }
 
-.reports-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-.reports-table th,
-.reports-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.priority {
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.875rem;
-}
-
-.priority.baja {
-    background: rgba(76, 217, 100, 0.2);
-    color: var(--success-color);
-}
-
-.priority.media {
-    background: rgba(255, 204, 0, 0.2);
-    color: #ffcc00;
-}
-
-.priority.alta {
-    background: rgba(255, 107, 107, 0.2);
-    color: var(--error-color);
-}
-
-.report-actions {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.report-actions button {
-    background: transparent;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-}
-
-.report-actions button:hover {
-    background: rgba(100, 255, 218, 0.1);
-}
-
-tr.atendido {
-    opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-    .calendar-header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .events-table {
-        display: block;
-        overflow-x: auto;
-    }
+.submit-btn:hover {
+    background: #52d1b8; /* Cambiar el color al pasar el mouse */
 }
